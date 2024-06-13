@@ -1,0 +1,186 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+*,
+*::after,
+*::before,
+* *,
+* *::after,
+* *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+:root {
+    --textColor: var(--GrayishBlue);
+    --bgColor: var(--VeryLightGray);
+    font-size: 15px;
+}
+
+BODY {
+    color: var(--textColor);
+    background: var(--bgColor);
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+:focus {
+    outline: 2px solid var(--GrayishBlue);
+    outline-offset: 0.1rem;
+}
+
+H1,
+H2,
+H3 {
+    color: var(--VeryDarkBlue);
+    font-size: 2rem;
+}
+
+H1,
+H2 {
+    font-size: 2rem;
+}
+
+H2,
+H3 {
+    font-weight: 600;
+}
+
+H1 {
+    font-weight: 200;
+}
+
+H3 {
+    font-size: 1.2rem;
+}
+
+P {
+    font-weight: 400;
+}
+
+IMG {
+    display: block;
+}
+
+A {
+    background: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+A:visited,
+A:focus,
+A:active {
+    color: unset;
+}
+
+UL {
+    list-style: none;
+}
+
+BUTTON {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+SVG {
+    height: 100%;
+    width: auto;
+}
+
+BODY,
+HEADER {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cards_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+ARTICLE {
+    padding: 2rem;
+    border-radius: .5rem;
+    border-top: solid 4px;
+    width: fit-content;
+    box-shadow: 0 4px .75rem var(--GrayishBlue);
+    height: auto;
+    width: 100%
+}
+
+.image_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.cards_control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon_container {
+    display: block;
+    width: 64px;
+    height: 64px;
+
+}
+
+ARTICLE P,
+ARTICLE H3 {
+    text-align: left;
+}
+
+[data-type="cyan"] {
+    border-color: var(--Cyan);
+}
+
+[data-type="red"] {
+    border-color: var(--Red);
+}
+
+[data-type="orange"] {
+    border-color: var(--Orange);
+}
+
+[data-type="blue"] {
+    border-color: var(--Blue);
+}
+
+.attribution A {
+    color: var(--Cyan);
+}
+
+@media screen and (min-width:1000px) {
+    .cards_container {
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+}
